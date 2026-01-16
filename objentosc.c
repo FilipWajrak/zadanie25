@@ -1,8 +1,12 @@
 #include <stdio.h>
-
+#define PI 3.14159265
 float objetosc_prostopadloscianu(float a, float b, float c)
 {
     return a * b * c;
+}
+float objetosc_walec(float r, float h)
+{
+    return PI * r *r *h;
 }
 void obliczanie_objetosc_prostopadloscianu(){
   float a, b, c, objetosc;
@@ -21,8 +25,24 @@ void obliczanie_objetosc_prostopadloscianu(){
 
     printf("Objetosc prostopadloscianu wynosi: %.2f\n", objetosc);
 }
-int main() {
+void obliczanie_objetosc_walec(){
+  float r, h,objetosc;
 
-obliczanie_objetosc_prostopadloscianu();
+    printf("Podaj promien walca: ");
+    scanf("%f", &r);
+
+    printf("Podaj wysokosc walca: ");
+    scanf("%f", &h);
+
+    objetosc = objetosc_walec(r,h);
+
+
+    printf("Objetosc prostopadloscianu wynosi: %.2f\n", objetosc);
+}
+
+
+int main() {
+obliczanie_objetosc_walec();
+//obliczanie_objetosc_prostopadloscianu();
 
 }
