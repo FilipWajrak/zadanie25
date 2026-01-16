@@ -37,12 +37,28 @@ void obliczanie_objetosc_walec(){
     objetosc = objetosc_walec(r,h);
 
 
-    printf("Objetosc prostopadloscianu wynosi: %.2f\n", objetosc);
+    printf("Objetosc walca wynosi: %.2f\n", objetosc);
 }
 
 
-int main() {
-obliczanie_objetosc_walec();
-//obliczanie_objetosc_prostopadloscianu();
+int main()
+{
+    int wybor;
+    printf("====================menu=====================\n");
+    printf("1------Oblicz objetosc prostopadloscianu\n");
+    printf("2------Oblicz objetosc walca\n");
+    scanf("%d", &wybor);
 
+
+    if (wybor==1){
+        obliczanie_objetosc_prostopadloscianu();
+    }
+    if (wybor==2){
+        obliczanie_objetosc_walec();
+    }
+
+
+
+
+    return 0;
 }
